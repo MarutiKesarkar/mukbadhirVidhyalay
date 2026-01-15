@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { CommonModule } from "../../../../node_modules/@angular/common/types/_common_module-chunk";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-member-talk',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './member-talk.html',
-  styleUrl: './member-talk.scss',
-  standalone: true
+  styleUrls: ['./member-talk.scss']
 })
 export class MemberTalk {
   public membersTalk = [

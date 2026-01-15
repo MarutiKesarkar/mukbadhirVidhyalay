@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
   standalone: true
 })
 export class Gallery {
-
+  public images = ['scoolNav.jpg','nav-1.png','nav-2.png','nav-3.png','nav-4.png','nav-5.png']
 }

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="d-flex head-top-img-box">
             <img src="logo.png" class="rounded-circle me-2" alt="logo">
-            <h1 class="navbar-brand mb-0 fs-2" href="#">नवजीवन मूक बधीर विद्यालय</h1>
+            <h1 class="navbar-brand mb-0 fs-3" href="#">नवजीवन मूकबधिर विद्यालय</h1>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse justify-content-md-end" id="navbarNav">
             <ul class="navbar-nav">
                   @for (item of navItems; track item){
-                <li class="nav-item" *ngFor="let item of navItems">
+                <li class="nav-item">
                     <a class="nav-link" [routerLink]="item.route" routerLinkActive="active"
                         [routerLinkActiveOptions]="{ exact: item.exact || false }" (click)="closeNavbar()">
                         {{ item.label }}

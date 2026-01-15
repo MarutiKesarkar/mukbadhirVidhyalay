@@ -24,16 +24,8 @@ navItems: NavItem[] = [
       exact: true
     },
     {
-      label: 'ग्रामपंचायती बद्दल',
+      label: 'शाळेबद्दल',
       route: '/about'
-    },
-    {
-      label: 'सेवा',
-      route: '/services'
-    },
-    {
-      label: 'महत्त्वाची ठिकाणे',
-      route: '/places'
     },
    {
       label: 'छायाचित्र दालन',

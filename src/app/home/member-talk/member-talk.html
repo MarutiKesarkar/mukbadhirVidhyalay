@@ -1,22 +1,52 @@
 <section class="py-5 bg-light">
     <div class="container">
-
+        <div class="text-center p-4">
+    <h2 class="fw-bold mb-1">पालकांचे अभिप्राय</h2>
+  </div>
         <div class="mx-auto col-md-10">
-            <div class="row row-wrap justify-content-between align-items-center mb-4">
-                   @for (item of membersTalk; track item){
-                <div class="col-sm-4 col-md-8">
-                    <div class="notebook-wrapper playpen-sans-deva-font">
-                        <div class="notebook-page">
-                            <p>{{item.descriptions}}</p>
-                            <p class="signature">
-                                — {{item.name}}<br>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000"
+                data-bs-pause="hover" data-bs-wrap="true">
 
-                            </p>
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    @for (item of membersTalk; track item; let i = $index) {
+                    <button type="button" data-bs-target="#carouselExampleIndicators" [attr.data-bs-slide-to]="i"
+                        [class.active]="i === 0" aria-current="true">
+                    </button>
+                    }
+                </div>
+
+                <!-- Slides -->
+                <div class="carousel-inner">
+                    @for (item of membersTalk;track item; let i = $index) {
+                    <div class="carousel-item" [class.active]="i === 0">
+                        <div class="d-flex justify-content-center">
+                            <div class="col-md-8">
+                                <div class="notebook-wrapper playpen-sans-deva-font">
+                                    <div class="notebook-page">
+                                        <p>{{ item.descriptions }}</p>
+                                        <p class="signature">
+                                            — {{ item.name }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
+                    }
                 </div>
-            }
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
             </div>
         </div>
     </div>
