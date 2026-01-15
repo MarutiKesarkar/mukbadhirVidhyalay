@@ -1,1 +1,73 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+body {
+    // font-family: 'Khand', sans-serif!important;
+    background-color: rgba(255, 255, 255, 1);
+}
+.head-top-img-box{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    text-align: center;
+    img{
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+.playpen-sans-deva-font {
+  font-family: "Playpen Sans Deva", sans-serif!important;
+}
+
+
+.icon-soft {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   img {
+    width: 75%;
+    height: 75%;
+    object-fit: contain;
+   }
+}
+
+.hero {
+  min-height: 340px;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: inherit;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.card-soft {
+  border: 1px solid #e6eaf0;
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+}
+
+.timeline-line {
+  width: 2px;
+  background: #e6eaf0;
+  margin: 0 auto;
+}
+

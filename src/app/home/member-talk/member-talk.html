@@ -1,0 +1,23 @@
+<section class="py-5 bg-light">
+    <div class="container">
+
+        <div class="mx-auto col-md-10">
+            <div class="row row-wrap justify-content-between align-items-center mb-4">
+                   @for (item of membersTalk; track item){
+                <div class="col-sm-4 col-md-8">
+                    <div class="notebook-wrapper playpen-sans-deva-font">
+                        <div class="notebook-page">
+                            <p>{{item.descriptions}}</p>
+                            <p class="signature">
+                                — {{item.name}}<br>
+
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            }
+            </div>
+        </div>
+    </div>
+</section>
