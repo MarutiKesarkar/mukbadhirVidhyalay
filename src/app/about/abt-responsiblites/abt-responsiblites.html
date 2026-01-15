@@ -3,20 +3,27 @@
         <h4 class="fw-bold mb-4">सुविधा व संसाधने</h4>
 
         <div>
-            <ul class="list-group list-group-flush mt-3 flex-wrap">
-                <div class="d-flex flex-wrap w-100 justify-content-around">
-                     @for (item of items; track item){
-                    <li class="col-md-5 col-sm-12 shadow-sm list-group-item py-2 border-0 mb-3 mx-md-1 mx-0" [ngStyle]="{ 'background-color': item.bgColor }">
+            <ul class="list-group list-group-flush mt-3">
+                <div class="d-flex flex-wrap w-100 justify-content-between">
+                    @for (item of items; track item) {
+                    <li class="col-md-5 col-sm-12 shadow-sm list-group-item py-2 border-0 mb-3"
+                        [ngStyle]="{ 'background-color': item.bgColor }">
+                        <div class="d-flex align-items-center">
 
-                        <div class="avtar d-flex flex-wrap align-items-center">
-                            <div class="icon-wrapper">
+                            @if(item.image) {
+                            <img [src]="item.image" alt="feature image" class="feature-img me-3" />
+                            }
+                            
+                            <!-- <div class="icon-wrapper">
                                 <i [class]="'bi ' + item.icon" [style.color]="item.iconColor"></i>
-                            </div>
-                            <div class="ms-3">
-                                <strong>{{ item.title }}: </strong> &nbsp;<p class="mb-0 text-muted"> {{ item.description }}</p>
-                            </div>
-                        </div>
+                            </div> -->
 
+                            <div class="ms-3">
+                                <strong>{{ item.title }}</strong>
+                                <p class="mb-0 text-muted">{{ item.description }}</p>
+                            </div>
+
+                        </div>
                     </li>
                     }
                 </div>
